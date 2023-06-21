@@ -4,16 +4,16 @@ from sqlalchemy.sql import text
 
 # Adds a demo user, you can add other users here if you want
 def seed_users():
-    demo = User(
-        username='Demo', email='demo@aa.io', password='password')
-    marnie = User(
-        username='marnie', email='marnie@aa.io', password='password')
-    bobbie = User(
-        username='bobbie', email='bobbie@aa.io', password='password')
+    demoUS = User(
+        email='demoUS@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkYh3QR8DxPitiCfYpKBVSLlQa_dPqQqGy-w&usqp=CAU", username='DemoUs', password='password')
+    demoBR = User(
+        email='demoBR@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png", username='DemoBR', password='password')
+    demoMX = User(
+        email='demoMX@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png", username='DemoMX', password='password')
 
-    db.session.add(demo)
-    db.session.add(marnie)
-    db.session.add(bobbie)
+    db.session.add(demoUS)
+    db.session.add(demoBR)
+    db.session.add(demoMX)
     db.session.commit()
 
 
@@ -28,5 +28,5 @@ def undo_users():
         db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
     else:
         db.session.execute(text("DELETE FROM users"))
-        
+
     db.session.commit()
