@@ -26,7 +26,7 @@ class Score(db.Model):
             'user_id': self.user_id,
             'game_id': self.game_id,
             'final_score': self.final_score,
-            'round_number': self.round_number,
+            'numOfRounds': self.round_number,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
         }

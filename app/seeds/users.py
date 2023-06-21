@@ -10,10 +10,19 @@ def seed_users():
         email='demoBR@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png", username='DemoBR', password='password')
     demoMX = User(
         email='demoMX@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png", username='DemoMX', password='password')
+    demoUSfan = User(
+        email='demoUSfan@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkYh3QR8DxPitiCfYpKBVSLlQa_dPqQqGy-w&usqp=CAU", username='DemoUsfan', password='password')
+    demoBRfan = User(
+        email='demoBRfan@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png", username='DemoBRfan', password='password')
+    demoMXfan = User(
+        email='demoMXfan@aa.io', profile_picture="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg", country_banner="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png", username='DemoMXfan', password='password')
 
     db.session.add(demoUS)
     db.session.add(demoBR)
     db.session.add(demoMX)
+    db.session.add(demoUSfan)
+    db.session.add(demoBRfan)
+    db.session.add(demoMXfan)
     db.session.commit()
 
 
