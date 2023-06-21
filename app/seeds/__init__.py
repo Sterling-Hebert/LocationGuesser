@@ -1,5 +1,11 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
+from app.seeds.groups import seed_groups, undo_groups
+from app.seeds.games import seed_games, undo_games
+from app.seeds.scores import seed_scores, undo_scores
+from app.seeds.rounds import seed_rounds, undo_rounds
+from app.seeds.user_groups import seed_user_groups, undo_user_groups
+
 
 from app.models.db import db, environment, SCHEMA
 
@@ -17,7 +23,18 @@ def seed():
         # the schema name (see comment in users.py undo_users function).
         # Make sure to add all your other model's undo functions below
         undo_users()
+        undo_groups()
+        undo_games()
+        undo_scores()
+        undo_rounds()
+        undo_user_groups()
+
     seed_users()
+    seed_groups()
+    seed_games()
+    seed_scores()
+    seed_rounds()
+    seed_user_groups()
     # Add other seed functions here
 
 
@@ -25,5 +42,11 @@ def seed():
 @seed_commands.command('undo')
 def undo():
     undo_users()
+    undo_groups()
+    undo_games()
+    undo_scores()
+    undo_rounds()
+    undo_user_groups()
+
     # Add other undo functions here
     # print("")
