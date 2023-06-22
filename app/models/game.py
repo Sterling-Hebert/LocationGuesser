@@ -16,15 +16,25 @@ class Game(db.Model):
 
 # many side user to games
     user = db.relationship("User", foreign_keys=[user_id], back_populates="user_games")
-    rounds_game = db.relationship("Round", back_populates="game_rounds")
+    rounds = db.relationship("Round", back_populates="game")
 
 
     def to_dict(self):
         return {
+            # 'id': self.id,
+            # 'userid': self.user_id,
+            # 'user': self.user.to_resource_dict(),
+            'gameMode': self.game_mode,
+            'gameRounds': {round.id: round.to_dict() for round in self.rounds},
+            'createdAt': self.created_at,
+            'updatedAt': self.updated_at,
+        }
+
+    def to_resource_dict(self):
+        return {
             'id': self.id,
-            'user_id': self.user_id,
-            'game_mode': self.game_mode,
-            'rounds_game': self.rounds_game,
-            'created_at': self.created_at,
-            'updated_at': self.updated_at,
+            'userId': self.user_id,
+            'gameMode': self.game_mode,
+            'createdAt': self.created_at,
+            'updatedAt': self.updated_at,
         }

@@ -15,17 +15,17 @@ class Round(db.Model):
     has_started = db.Column(db.Boolean)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-    game_rounds = db.relationship("Game", back_populates="rounds_game")
+    game = db.relationship("Game", back_populates="rounds")
 
 
 
     def to_dict(self):
         return {
             'id': self.id,
-            'game_id': self.game_id,
-            'round_number': self.round_number,
-            'round_score': self.round_score,
-            'previous_rounds':self.game_rounds,
-            'has_started': self.has_started,
-            'created_at': self.created_at,
+            # 'gameId': self.game_id,
+            'roundNumber': self.round_number,
+            'roundScore': self.round_score,
+            # 'rounds': self.game.to_resource_dict(),
+            'hasStarted': self.has_started,
+            'createdAt': self.created_at,
         }
