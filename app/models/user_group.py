@@ -15,14 +15,15 @@ class UsersGroup(db.Model):
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     user = db.relationship("User", back_populates="groups_joined", )
-    group_users = db.relationship("Group",  back_populates="users")
+    group = db.relationship("Group",  back_populates="group_users")
 
     def to_dict(self):
         return {
             'id': self.id,
-            'user_id': self.user_id,
-            'group_id': self.group_id,
-            'created_at': self.created_at,
-            'updated_at': self.updated_at,
-            # 'groups_users': self.group_users,
+            'userId': self.user_id,
+            'groupId': self.group_id,
+            'createdAt': self.created_at,
+            'updatedAt': self.updated_at,
+            'group': self.group.to_resource_dict(),
+            'user': self.user.to_resource_dict()
         }

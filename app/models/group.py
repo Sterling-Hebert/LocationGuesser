@@ -17,16 +17,26 @@ class Group(db.Model):
 
 
     owner = db.relationship('User', back_populates="groups_owned")
-    users = db.relationship('UsersGroup', back_populates='group_users')
+    group_users = db.relationship('UsersGroup', back_populates='group')
 
 
-def to_dict(self):
+    def to_dict(self):
         return {
-            'id': self.id,
-            'group_banner': self.group_banner,
-            'group_name': self.group_name,
-            'group_owner': self.owner_id,
-            'group_users': self.users,
-            'created_at': self.created_at,
-            'updated_at': self.updated_at,
+            # 'id': self.id,
+            'groupBanner': self.group_banner,
+            'groupName': self.group_name,
+            'groupOwnerId': self.owner_id,
+            'groupMembers': {member.id: member.to_dict() for member in self.group_users},
+            'createdAt': self.created_at,
+            'updatedAt': self.updated_at,
+        }
+
+    def to_resource_dict(self):
+        return {
+            # 'id': self.id,
+            'groupBanner': self.group_banner,
+            'groupName': self.group_name,
+            'ownerId': self.owner_id,
+            'createdAt': self.created_at,
+            'updatedAt': self.updated_at,
         }

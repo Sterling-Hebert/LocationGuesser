@@ -42,12 +42,22 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'email': self.email,
             'profile_picture': self.profile_picture,
-            'country_banner': self.country_banner,
+            'countryBanner': self.country_banner,
             'username': self.username,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
-            'user_games': self.user_games,
-            'user_scores': self.scores_user,
-            'groups_joined': self.groups_joined,
-            'groups_owned': self.groups_owned,
+            'gamesPlayed': {game.id: game.to_dict() for game in self.user_games},
+            'userFinalScores': {score.id: score.to_dict() for score in self.scores_user},
+            'groupsJoined':{group.id: group.to_dict() for group in self.groups_joined},
+            'groupsOwned':{group.id: group.to_dict() for group in self.groups_owned},
+        }
+    def to_resource_dict(self):
+        return{
+            'id': self.id,
+            'email': self.email,
+            'profilePicture': self.profile_picture,
+            'countryBanner': self.country_banner,
+            'username': self.username,
+            'createdAt': self.created_at,
+            'updatedAt': self.updated_at,
         }
