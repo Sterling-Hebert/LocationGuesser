@@ -21,7 +21,7 @@ class Round(db.Model):
 
     def to_dict(self):
         return {
-            'id': self.id,
+            # 'id': self.id,
             # 'gameId': self.game_id,
             'roundNumber': self.round_number,
             'roundScore': self.round_score,
