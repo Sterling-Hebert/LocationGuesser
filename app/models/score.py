@@ -22,9 +22,9 @@ class Score(db.Model):
 
     def to_dict(self):
         return {
-            # 'id': self.id,
-            # 'userId': self.user_id,
-            # 'gameId': self.game_id,
+            'id': self.id,
+            'userId': self.user_id,
+            'gameId': self.game_id,
             'finalScore': self.final_score,
             'numberOfRounds': self.round_number,
             # 'user': self.user.to_resource_dict(),

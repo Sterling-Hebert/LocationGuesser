@@ -21,8 +21,8 @@ class Game(db.Model):
 
     def to_dict(self):
         return {
-            # 'id': self.id,
-            # 'userid': self.user_id,
+            'id': self.id,
+            'userid': self.user_id,
             # 'user': self.user.to_resource_dict(),
             'gameMode': self.game_mode,
             'gameRounds': {round.id: round.to_dict() for round in self.rounds},

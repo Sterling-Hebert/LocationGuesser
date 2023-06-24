@@ -25,5 +25,5 @@ class UsersGroup(db.Model):
             'createdAt': self.created_at,
             'updatedAt': self.updated_at,
             'group': self.group.to_resource_dict(),
-            'user': self.user.to_resource_dict()
+            # 'user': self.user.to_resource_dict()
         }

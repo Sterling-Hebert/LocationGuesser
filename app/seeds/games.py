@@ -8,7 +8,7 @@ def seed_games():
     demoBRgame = Game(
         user_id=2, game_mode="united_states")
     demoMXgame = Game(
-        user_id=1, game_mode="famous_places")
+        user_id=3, game_mode="famous_places")
 
     db.session.add(demoUSgame)
     db.session.add(demoBRgame)
