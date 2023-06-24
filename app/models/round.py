@@ -27,5 +27,5 @@ class Round(db.Model):
             'roundScore': self.round_score,
             # 'rounds': self.game.to_resource_dict(),
             'hasStarted': self.has_started,
-            'createdAt': self.created_at,
+            # 'createdAt': self.created_at,
         }

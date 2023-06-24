@@ -22,7 +22,7 @@ class Group(db.Model):
 
     def to_dict(self):
         return {
-            # 'id': self.id,
+            'id': self.id,
             'groupBanner': self.group_banner,
             'groupName': self.group_name,
             'groupOwnerId': self.owner_id,
@@ -33,7 +33,7 @@ class Group(db.Model):
 
     def to_resource_dict(self):
         return {
-            # 'id': self.id,
+            'id': self.id,
             'groupBanner': self.group_banner,
             'groupName': self.group_name,
             'ownerId': self.owner_id,
