@@ -5,6 +5,18 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
+import MainMenuPage from "./components/MainMenuPage";
+import GameModePage from "./components/GameModePage";
+import FamousPlacesGame from "./components/FamousPlacesGame";
+import WorldGame from "./components/UnitedStatesGame";
+import UnitedStatesGame from "./components/UnitedStatesGame";
+import SocialPage from "./components/SocialPage";
+import CreateGroupPage from "./components/CreateGroupPage";
+import EditGroupsPage from "./components/EditGroupPage";
+import PersonalStatsPage from "./components/PersonalStatsPage";
+import LeaderBoardsPage from "./components/LeaderBoardsPage";
+import LandingPage from "./components/LandingPage";
+import FindGroupsPage from "./components/FindGroupsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,11 +30,48 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          <Route path="/login" >
+          {/* <Route path="/login" >
             <LoginFormPage />
           </Route>
           <Route path="/signup">
             <SignupFormPage />
+          </Route> */}
+
+          <Route path="/main-menu">
+            <MainMenuPage />
+          </Route>
+          <Route path="/game-modes">
+            <GameModePage />
+          </Route>
+          <Route path="/famous-places/play">
+            <FamousPlacesGame/>
+          </Route>
+          <Route path="/world/play">
+            <WorldGame/>
+          </Route>
+          <Route path="/united-states/play">
+            <UnitedStatesGame/>
+          </Route>
+          <Route path="/social">
+            <SocialPage/>
+          </Route>
+          <Route path="/groups/explore">
+            <FindGroupsPage/>
+          </Route>
+          <Route path="/groups/create">
+            <CreateGroupPage/>
+          </Route>
+          <Route path="/my-group/edit">
+            <EditGroupsPage/>
+          </Route>
+          <Route path="/my-stats">
+            <PersonalStatsPage/>
+          </Route>
+          <Route path="/leader-boards">
+            <LeaderBoardsPage/>
+          </Route>
+          <Route path="/">
+            <LandingPage />
           </Route>
         </Switch>
       )}
