@@ -1,0 +1,36 @@
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 24px;
+    background-color: #f2f2f2;
+  }
+
+  .login-form-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .login-form-errors {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+    color: red;
+  }
+
+  .login-form-label {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .login-form-button {
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }

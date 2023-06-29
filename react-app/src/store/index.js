@@ -1,9 +1,15 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import session from './session'
+import gameReducer from './games';
+import groupReducer from './groups';
+import statsReducer from './stats';
 
 const rootReducer = combineReducers({
   session,
+  groups:groupReducer,
+  // games: gameReducer,
+  stats: statsReducer,
 });
 
 

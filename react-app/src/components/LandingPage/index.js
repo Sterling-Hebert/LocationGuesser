@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
 import { useModal } from '../../context/Modal';
+import "./LandingPage.css"
 
 function  LandingPage() {
     const { closeModal, openModal } = useModal();
@@ -16,11 +17,13 @@ function  LandingPage() {
 
 
   return (
-    <div>
-      <h1>Welcome to the Location Guesser</h1>
-      <button onClick={handleLoginButtonClick}>Login</button>
-      <button onClick={handleSignupButtonClick}>Signup</button>
-    </div>
+    <div className="LP-div">
+  <h1 className="LP-h1">Welcome to the Location Guesser</h1>
+  <div className="LP-buttons">
+    <button className="LP-button" onClick={handleLoginButtonClick}>Login</button>
+    <button className="LP-button" onClick={handleSignupButtonClick}>Signup</button>
+  </div>
+</div>
   );
 }
 

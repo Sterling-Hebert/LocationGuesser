@@ -39,7 +39,7 @@ def user_games_world():
 
     return {
         # may add game tracker
-        # "Games": [game.to_dict() for game in games],
+        "Games": [game.to_dict() for game in games],
         "World mode stats": calculate_stats(games)
     }
 
