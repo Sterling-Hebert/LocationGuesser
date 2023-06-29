@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import SignupFormPage from "./components/SignupFormPage";
-import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import MainMenuPage from "./components/MainMenuPage";
 import GameModePage from "./components/GameModePage";
 import FamousPlacesGame from "./components/FamousPlacesGame";
-import WorldGame from "./components/UnitedStatesGame";
+import WorldGame from "./components/WorldGame";
 import UnitedStatesGame from "./components/UnitedStatesGame";
 import SocialPage from "./components/SocialPage";
 import CreateGroupPage from "./components/CreateGroupPage";
-import EditGroupsPage from "./components/EditGroupPage";
+import EditGroupPage from "./components/EditGroupPage";
 import PersonalStatsPage from "./components/PersonalStatsPage";
 import LeaderBoardsPage from "./components/LeaderBoardsPage";
 import LandingPage from "./components/LandingPage";
@@ -30,26 +28,19 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          {/* <Route path="/login" >
-            <LoginFormPage />
-          </Route>
-          <Route path="/signup">
-            <SignupFormPage />
-          </Route> */}
-
           <Route path="/main-menu">
             <MainMenuPage />
           </Route>
           <Route path="/game-modes">
             <GameModePage />
           </Route>
-          <Route path="/famous-places/play">
+          <Route path="/play/famous-places">
             <FamousPlacesGame/>
           </Route>
-          <Route path="/world/play">
+          <Route path="/play/world">
             <WorldGame/>
           </Route>
-          <Route path="/united-states/play">
+          <Route path="/play/united-states">
             <UnitedStatesGame/>
           </Route>
           <Route path="/social">
@@ -61,9 +52,7 @@ function App() {
           <Route path="/groups/create">
             <CreateGroupPage/>
           </Route>
-          <Route path="/my-group/edit">
-            <EditGroupsPage/>
-          </Route>
+          <Route path="/groups/edit/:groupId" component={EditGroupPage} />
           <Route path="/my-stats">
             <PersonalStatsPage/>
           </Route>

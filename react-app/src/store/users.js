@@ -3,6 +3,7 @@ const GET_ALL_USERS = "users/GET_ALL_USERS";
 const GET_USER_BY_ID = "users/GET_USER_BY_ID"
 const GET_CURRENT_USER = "users/GET_CURRENT_USER"
 
+
 export const getUsers = (users) => {
   return {
     type: GET_ALL_USERS,

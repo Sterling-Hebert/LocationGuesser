@@ -1,0 +1,35 @@
+
+.MMP-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.MMP-h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.MMP-button-container {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.MMP-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.MMP-button:hover {
+  background-color: #e6e6e6;
+}

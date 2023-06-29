@@ -24,6 +24,7 @@ class UsersGroup(db.Model):
             'groupId': self.group_id,
             'createdAt': self.created_at,
             'updatedAt': self.updated_at,
-            'group': self.group.to_resource_dict(),
+            # 'group': self.group.to_resource_dict(),
+            'group': self.group.to_resource_dict() if self.group else None
             # 'user': self.user.to_resource_dict()
         }

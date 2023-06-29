@@ -1,23 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './MainMenuPage.css';
 
 function MainMenuPage() {
   return (
-    <div>
-      <h1>Main Menu</h1>
-      <div>
-        <p>
+    <div className="MMP-div">
+      <h1 className="MMP-h1">Main Menu</h1>
+      <div className="MMP-button-container">
+        <button className="MMP-button">
           <Link to="/game-modes">Play</Link>
-        </p>
-        <p>
+        </button>
+        <button className="MMP-button">
           <Link to="/social">Social</Link>
-        </p>
-        <p>
+        </button>
+        <button className="MMP-button">
           <Link to="/my-stats">Stats</Link>
-        </p>
-        <p>
+        </button>
+        <button className="MMP-button">
           <Link to="/leader-boards">Leaderboards</Link>
-        </p>
+        </button>
       </div>
     </div>
   );
