@@ -32,12 +32,35 @@ def group_details(group_id):
 @login_required
 def user_groups():
     """
-    Query for the the current users groups
+    Query for the current user's groups (including groups they own)
     """
     user = current_user
+
     user_groups = UsersGroup.query.filter_by(user_id=user.id).all()
-    return {"UserGroups": [user_group.to_dict() for user_group in user_groups]}
-# need to add owned groupd as well in here
+    owned_groups = Group.query.filter_by(owner_id=user.id).all()
+
+    user_groups_data = [user_group.to_dict() for user_group in user_groups]
+    owned_groups_data = [group.to_dict() for group in owned_groups]
+
+    return jsonify({
+        "UserGroups": user_groups_data,
+        "OwnedGroups": owned_groups_data
+    })
+
+@groups_routes.route('/not_joined')
+@login_required
+def not_joined_groups():
+    """
+    Query for groups that the current user has not joined
+    """
+    user = current_user
+
+    user_group_ids = [user_group.group_id for user_group in user.groupsJoined]
+    not_joined_groups = Group.query.filter(Group.id.notin_(user_group_ids)).all()
+
+    not_joined_groups_data = [group.to_dict() for group in not_joined_groups]
+
+    return jsonify({"NotJoinedGroups": not_joined_groups_data})
 
 @groups_routes.route('/create', methods=['POST'])
 @login_required
@@ -73,7 +96,7 @@ def join_group(group_id):
 
     return jsonify({"message": "You have now joined the group!"}), 201
 
-@groups_routes.route('/unfollow/<int:group_id>', methods=['POST'])
+@groups_routes.route('/unfollow/<int:group_id>', methods=['DELETE'])
 @login_required
 def unfollow_group(group_id):
     """
@@ -103,9 +126,10 @@ def edit_group(group_id):
         return jsonify({"error": "Group not found"}), 404
     if group.owner != current_user:
         return jsonify({"error": "Must be owner of this group to edit"}), 403
+
     updated_data = request.get_json()
-    group.group_name = updated_data.get('group_name', group.group_name)
-    group.group_banner = updated_data.get('group_banner', group.group_banner)
+    group.group_name = updated_data.get('groupName', group.group_name)
+    group.group_banner = updated_data.get('groupBanner', group.group_banner)
 
     db.session.commit()
 
