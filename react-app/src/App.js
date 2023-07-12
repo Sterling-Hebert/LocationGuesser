@@ -28,41 +28,41 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          <Route path="/main-menu">
-            <MainMenuPage />
-          </Route>
-          <Route path="/game-modes">
-            <GameModePage />
-          </Route>
-          <Route path="/play/famous-places">
-            <FamousPlacesGame/>
-          </Route>
-          <Route path="/play/world">
-            <WorldGame/>
-          </Route>
-          <Route path="/play/united-states">
-            <UnitedStatesGame/>
-          </Route>
-          <Route path="/social">
-            <SocialPage/>
-          </Route>
-          <Route path="/groups/explore">
-            <FindGroupsPage/>
-          </Route>
-          <Route path="/groups/create">
-            <CreateGroupPage/>
-          </Route>
-          <Route path="/groups/edit/:groupId" component={EditGroupPage} />
-          <Route path="/my-stats">
-            <PersonalStatsPage/>
-          </Route>
-          <Route path="/leader-boards">
-            <LeaderBoardsPage/>
-          </Route>
-          <Route path="/">
-            <LandingPage />
-          </Route>
-        </Switch>
+        <Route path="/main-menu">
+          <MainMenuPage />
+        </Route>
+        <Route path="/game-modes">
+          <GameModePage />
+        </Route>
+        <Route path="/play/famous-places">
+          <FamousPlacesGame/>
+        </Route>
+        <Route path="/play/world">
+          <WorldGame/>
+        </Route>
+        <Route path="/play/united-states">
+          <UnitedStatesGame/>
+        </Route>
+        <Route path="/social">
+          <SocialPage/>
+        </Route>
+        <Route path="/groups/explore">
+          <FindGroupsPage/>
+        </Route>
+        <Route path="/groups/create">
+          <CreateGroupPage/>
+        </Route>
+        <Route path="/groups/edit/:groupId" component={EditGroupPage} />
+        <Route path="/my-stats">
+          <PersonalStatsPage/>
+        </Route>
+        <Route path="/leader-boards">
+          <LeaderBoardsPage/>
+        </Route>
+        <Route path="/">
+          <LandingPage />
+        </Route>
+      </Switch>
       )}
     </>
   );
