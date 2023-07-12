@@ -38,7 +38,7 @@ function SocialPage() {
 
   return (
     <div className="social-page">
-      <Link to="/" className="back-button">
+      <Link to="/main-menu" className="back-button">
         Back
       </Link>
       <h1>Welcome to the Social Page!</h1>

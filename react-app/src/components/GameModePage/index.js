@@ -11,13 +11,13 @@ function GameModePage() {
       <h1 className="GMP-h1">Game Modes</h1>
       <div className="GMP-button-container">
         <button className="GMP-button">
-          <Link to="/world/play">World</Link>
+          <Link to="/play/world">World</Link>
         </button>
         <button className="GMP-button">
-          <Link to="/famous-places/play">Famous Places</Link>
+          <Link to="/play/famous-places">Famous Places</Link>
         </button>
         <button className="GMP-button">
-          <Link to="/united-states/play">United States</Link>
+          <Link to="/play/united-states">United States</Link>
         </button>
       </div>
     </>
