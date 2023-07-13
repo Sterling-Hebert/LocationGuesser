@@ -1,0 +1,85 @@
+
+.MMP-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.MMP-h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: White;
+}
+
+.MMP-button-container {
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.MMP-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+.MMP-button-play:hover{
+  background-color: #e6e6e6;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+
+}
+.MMP-button-logout{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: lightcoral;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.MMP-button-logout:hover {
+  background-color: #e6e6e6;
+}
+.MMP-button-play{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.MMP-button:hover {
+  background-color: #e6e6e6;
+}
+.MMP-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.MMP-logo img {
+  width: 50px;
+  height: 50px;
+}
+.background-image {
+      background-image: url('https://wallpapershome.com/images/wallpapers/fog-2560x1440-forest-bing-microsoft-4k-23136.jpg');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+    }

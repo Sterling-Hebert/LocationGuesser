@@ -1,0 +1,57 @@
+.find-groups-container {
+    color: #fff;
+    position: relative;
+    padding: 40px;
+    color: white;
+  }
+
+  .group-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .group-card img {
+    width: 200px;
+    height: 100px;
+  }
+
+  .group-card h3,
+  .group-card p {
+    margin: 5px 0;
+  }
+
+  .group-card button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+  }
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+  }
+  .find-groups-container {
+    max-height: 1000px;
+    overflow-y: auto;
+  }
+
+  .group-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }

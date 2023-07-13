@@ -1,0 +1,139 @@
+.social-page {
+    position: relative;
+    padding: 20px;
+    color: white;
+    padding-bottom: 20px;
+  }
+
+  .social-page  h1{
+    position: relative;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .back-button:hover {
+    background-color: #e6e6e6;
+  }
+
+  .create-group-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+
+  }
+  .create-group-section button {
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+  }
+
+  .group-section {
+    margin-bottom: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .single-group-section{
+    border: 1px solid #ccc;
+    padding-left: 10px;
+  }
+
+  .group-section h2 {
+    margin-bottom: 10px;
+  }
+
+  .group-section button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .group-section button:hover {
+    background-color: #e6e6e6;
+  }
+
+  .group-section div {
+    margin-bottom: 20px;
+  }
+
+  .group-section img {
+    width: 200px;
+    height: 100px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .modal-content h3 {
+    margin-bottom: 10px;
+  }
+
+  .modal-content button {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .modal-content button:hover {
+    background-color: gray;
+  }
+  .green{
+    background-color: green;
+  }
+  .red{
+    background-color: red;
+  }
+  .group-section-container {
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  .social-page-container {
+    overflow-y: auto;
+    max-height: 1000px;
+  }
