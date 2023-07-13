@@ -7,7 +7,7 @@ import statsReducer from './stats';
 
 const rootReducer = combineReducers({
   session,
-  groups:groupReducer,
+  groups: groupReducer,
   games: gameReducer,
   stats: statsReducer,
 });

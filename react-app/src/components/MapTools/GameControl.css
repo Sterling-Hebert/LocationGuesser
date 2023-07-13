@@ -1,0 +1,49 @@
+
+.dialog-overlay {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: yellow;
+  padding: 15px;
+  filter: invert(1);
+
+}
+
+.guess-button{
+  background-color: black;
+  color: white;
+}
+.resultScreen {
+  color: pink;
+}
+
+.title {
+  text-align: center;
+}
+.dialog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.close-button{
+  background-color: black;
+  color: white;
+}
+.start-button{
+  margin-left: 850px;
+  margin-top: 200px;
+  background-color: lightpink;
+}
+.end-button{
+  background-color: black;
+  color: white;
+  margin-left: 45px;
+}
+.exit-button{
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}

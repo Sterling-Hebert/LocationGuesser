@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/components/LandingPage/vecteezy_city-lights-turn-on-as-night-falls-on-planet-earth__929.mp4
+/src/components/MainMenuPage/main-menu-vid.mp4

@@ -8,8 +8,10 @@ from flask_login import login_required, current_user
 from ..models.score import Score
 from ..models.round import Round
 from ..models.game import Game
+from ..models.user import User
 
 stats_routes = Blueprint('stats', __name__)
+
 
 @stats_routes.route('/famous_places')
 @login_required
@@ -93,3 +95,26 @@ def calculate_stats(games):
     }
 
     return stats
+
+
+
+@stats_routes.route('/leaderboard')
+@login_required
+def leaderboard():
+    """
+    Get the leaderboard of players based on total games played
+    """
+    players = User.query.all()
+
+    leaderboard = []
+    rank = 1
+    for player in players:
+        total_games_played = Score.query.filter_by(user_id=player.id).count()
+        leaderboard.append({
+            'rank': rank,
+            'name': player.username,
+            'totalGamesPlayed': total_games_played
+        })
+        rank += 1
+
+    return jsonify({'players': leaderboard})

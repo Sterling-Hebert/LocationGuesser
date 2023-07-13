@@ -1,34 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+body {
+  overflow: hidden;
+}
+
 .LP-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 40vh;
-  width: 70%;
-  max-width: 400px;
-  margin: 200px auto;
-  background-color: darkgrey;
-  border-radius: 20px;
-  padding: 24px;
-  box-sizing: border-box;
+  min-height: 90vh;
+  position: relative;
 }
 
 .LP-h1 {
-  font-size: 24px;
-  margin-bottom: 24px;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+.LP-buttons {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
 }
 
 .LP-button {
-  padding: 12px 24px;
-  border-radius: 20px;
-  font-size: 16px;
-  background-color: green;
-  color: #fff;
   border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  height: 45px;
+  outline: none;
+  width: 150px;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
   cursor: pointer;
-  margin-bottom: 12px;
+  transition: 0.3s;
 }
 
-.LP-button:last-child {
-  margin-bottom: 0;
+.LP-button:hover {
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.LP-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.LP-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }

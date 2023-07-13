@@ -1,0 +1,50 @@
+
+.leaderboard-container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .leaderboard-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .leaderboard-table th {
+    background-color: green;
+    color: Yellow;
+    font-weight: bold;
+  }
+
+  .leaderboard-table tr:nth-child(even) {
+    background-color: black;
+  }
+
+  .leaderboard-table tr:hover {
+    background-color: darkgray;
+  }
+
+  .leaderboard-rank {
+    color: yellow;
+  }
+
+  .leaderboard-player {
+    color: yellow;
+  }
+
+  .leaderboard-games-played {
+    color: yellow;
+  }

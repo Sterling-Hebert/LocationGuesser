@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+}
+
+  button {
+    padding: 4px;
+    background-color: lightgray;
+    color: lightgray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: green;
+  }
+.error {
+  color: red;
+  margin-top: 10px;
+}
+.banner-preview {
+  margin-top: 10px;
+}
+
+.banner-preview img {
+  max-width: 200px;
+  margin-left: 100px
+}
+.input-box{
+  margin-top: 10px;
+  padding-top: 10px;
+  width: 90%;
+}
