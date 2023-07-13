@@ -41,9 +41,6 @@ function MainMenuPage() {
         <button className="MMP-button">
           <Link to="/leader-boards">Leaderboards</Link>
         </button>
-        <button className="MMP-button-logout" onClick={handleLogout}>
-          <Link to="/">Logout</Link>
-        </button>
       </div>
     </div>
   );
