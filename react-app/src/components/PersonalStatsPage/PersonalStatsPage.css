@@ -22,3 +22,10 @@
     background-color: lightgray;
     font-weight: bold;
   }
+  .MMP-loading {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    color: white;
+  }
