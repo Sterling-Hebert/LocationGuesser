@@ -1,71 +1,12 @@
-
 .MMP-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  min-height: 100vh;
+  position: relative;
+  /* background-color: #f0f0f0; */
 }
 
-.MMP-h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: White;
-}
-
-.MMP-button-container {
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-.MMP-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: yellow;
-  border: none;
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-
-}
-.MMP-button-play:hover{
-  background-color: #e6e6e6;
-  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-
-}
-.MMP-button-logout{
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: lightcoral;
-  border: none;
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-}
-.MMP-button-logout:hover {
-  background-color: #e6e6e6;
-}
-.MMP-button-play{
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: green;
-  border: none;
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-}
-
-.MMP-button:hover {
-  background-color: #e6e6e6;
-}
 .MMP-logo {
   position: absolute;
   top: 10px;
@@ -76,10 +17,125 @@
   width: 50px;
   height: 50px;
 }
-.background-image {
-      background-image: url('https://wallpapershome.com/images/wallpapers/fog-2560x1440-forest-bing-microsoft-4k-23136.jpg');
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 100%;
-    }
+
+.MMP-h1 {
+  color: white;
+  font-size: 30px;
+  margin-top: 60px;
+}
+
+.MMP-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.MMP-card {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  margin: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.6s ease;
+}
+
+.MMP-card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.MMP-card-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.MMP-card-link:hover::after {
+  opacity: 1;
+}
+
+.MMP-card h1,
+.MMP-card span {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: fade-in 0.5s ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.MMP-card .MMP-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.MMP-bg1,
+.MMP-bg2,
+.MMP-bg3,
+.MMP-bg4,
+.MMP-bg5,
+.MMP-bg6,
+.MMP-bg7 {
+  background-size: cover;
+  background-position: center;
+}
+
+.MMP-bg1 {
+  background-image: url('https://cstad.s3-ap-southeast-2.amazonaws.com/naturalchina_zhangjiajiehero.jpg');
+}
+
+.MMP-bg2 {
+  background-image: url('https://www.reuters.com/resizer/tmNloT92sUu3wMC9vaEJDR0z-Ts=/960x1200/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/AHF2FYISNJO55J6N35YJBZ2JYY.jpg');
+}
+
+.MMP-bg3 {
+  background-image: url('https://cdn.britannica.com/98/214598-050-9879F2FA/giant-sequoia-tree-Sequoia-National-Park-California.jpg');
+}
+
+.MMP-bg4 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/59/305/180/blue-world-social-network-line-wallpaper-preview.jpg');
+}
+
+.MMP-bg5 {
+  background-image: url('https://loveincorporated.blob.core.windows.net/contentimages/gallery/03211459-0607-4d07-8a6c-9966e3820a7d-Mount-Kirkjufell-Iceland.jpg');
+}
+
+.MMP-bg6 {
+  background-image: url('https://www.jessleephotos.com/images/640/Cathedral-Group.jpg');
+}
+
+.MMP-bg7 {
+  background-image: url('https://i.pinimg.com/originals/b9/1d/bd/b91dbdcdbe71583ed31892642484649e.jpg');
+}
