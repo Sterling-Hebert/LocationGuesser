@@ -24,7 +24,7 @@ function  PersonalStatsPage() {
   }, []);
 
   if (!stats) {
-    return <div>Loading user stats...</div>;
+    return <div className="MMP-loading">Loading user stats........... Maybe you haven't played a game yet?</div>;
   }
 
   return (
