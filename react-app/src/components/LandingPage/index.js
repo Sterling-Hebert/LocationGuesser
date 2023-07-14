@@ -49,11 +49,7 @@ function LandingPage() {
   };
 
   return (
-    <div className="LP-div">
-      {/* <video className="video-background" autoPlay loop muted>
-        <source src={videoSource} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
+    <div className="LP-div" >
       <div className="LP-logo">
         <img src={logo} alt="Location Icon" />
       </div>
