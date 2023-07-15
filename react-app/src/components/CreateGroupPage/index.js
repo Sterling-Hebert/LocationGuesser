@@ -12,8 +12,31 @@ const CreateGroupPage = () => {
   const [bannerPreview, setBannerPreview] = useState('');
   const history = useHistory();
 
+  const validateUrl = (url) => {
+    const pattern = /^(ftp|http|https):\/\/[^ "]+$/;
+    return pattern.test(url);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (groupName.length < 4) {
+      setError('Group name must be at least 4 characters long.');
+      return;
+    }
+
+    if (groupBanner.length < 8) {
+      setError('Group banner must be at least 8 characters long.');
+      return;
+    }
+
+    const isValidUrl = validateUrl(groupBanner);
+
+    if (!isValidUrl) {
+      setError('Invalid URL.');
+      return;
+    }
+
     const groupData = { groupName, groupBanner };
 
     try {
@@ -42,10 +65,6 @@ const CreateGroupPage = () => {
   };
 
   const isFormEmpty = !groupName || !groupBanner;
-  const isValidURL = (url) => {
-    const pattern = /^(ftp|http|https):\/\/[^ "]+$/;
-    return pattern.test(url);
-  };
 
   return (
     <div className="card-container">
@@ -60,11 +79,11 @@ const CreateGroupPage = () => {
           <br />
           <label>
             Group Banner
-            <br></br>
-            (Link Address URL ending with JPG or  URL ):
-            <input className='input-box' type="text" value={groupBanner} onChange={handleGroupBannerChange} />
+            <br />
+            (Link Address URL ending with JPG or URL ):
+            <input className="input-box" type="text" value={groupBanner} onChange={handleGroupBannerChange} />
           </label>
-          {bannerPreview && isValidURL(bannerPreview) && (
+          {bannerPreview && validateUrl(bannerPreview) && (
             <div className="banner-preview">
               <img src={bannerPreview} alt="Group Banner Preview" />
             </div>
