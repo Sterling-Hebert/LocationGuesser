@@ -19,15 +19,30 @@ function EditGroupPage() {
   }, [dispatch, groupId]);
 
   useEffect(() => {
-    console.log('Group------>>>', group);
     if (group) {
-      setGroupName(group.groupName || '');
-      setGroupBanner(group.groupBanner || '');
+      setGroupName(group.groupName);
+      setGroupBanner(group.groupBanner);
     }
   }, [group]);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+
+    if (groupName.length < 4) {
+      setError('Group name must be at least 4 characters long.');
+      return;
+    }
+
+    if (!groupBanner || groupBanner.length < 8) {
+      setError('Group banner must be at least 8 characters long.');
+      return;
+    }
+
+    if (!isValidURL(groupBanner)) {
+      setError('Invalid URL.');
+      return;
+    }
+
     const groupData = { groupName, groupBanner };
 
     try {

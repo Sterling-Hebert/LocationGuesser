@@ -180,7 +180,7 @@ export default function ControlBox(props) {
         <div>
          {!open && (
           <><button className='start-button' onClick={handleClickOpen}>
-               Click to make guess
+               Click to open guess overlay
             </button>
           </>
                )}
@@ -206,7 +206,7 @@ export default function ControlBox(props) {
                     </button>
                   ) : (
                     <button className="guess-button" onClick={handleGuess}>
-                      Make Guess
+                      Confirm Guess
                     </button>
                   )}{showResult ? (
                     <h3 className="title">
