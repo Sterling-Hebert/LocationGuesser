@@ -26,6 +26,20 @@ class User(db.Model, UserMixin):
     groups_joined = db.relationship('UsersGroup', back_populates='user')
     groups_owned = db.relationship('Group', back_populates='owner')
 
+    sent_requests = db.relationship('FriendRequest', back_populates='sender', foreign_keys='FriendRequest.sender_id')
+    received_requests = db.relationship('FriendRequest', back_populates='recipient', foreign_keys='FriendRequest.recipient_id')
+
+    added_friends = db.relationship(
+        'Friend',
+        primaryjoin='User.id==Friend.user_id',
+        back_populates='user'
+    )
+    added_by = db.relationship(
+        'Friend',
+        primaryjoin='User.id==Friend.friend_id',
+        back_populates='friend'
+    )
+
     @property
     def password(self):
         return self.hashed_password
@@ -50,6 +64,8 @@ class User(db.Model, UserMixin):
             'userFinalScores': {score.id: score.to_dict() for score in self.scores_user},
             'groupsJoined':{group.id: group.to_dict() for group in self.groups_joined},
             'groupsOwned':{group.id: group.to_dict() for group in self.groups_owned},
+            'addedFriends': [friend.username for friend in self.added_friends],
+            'addedBy': [friend.username for friend in self.added_by]
         }
     def to_resource_dict(self):
         return{
