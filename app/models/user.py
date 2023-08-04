@@ -64,8 +64,8 @@ class User(db.Model, UserMixin):
             'userFinalScores': {score.id: score.to_dict() for score in self.scores_user},
             'groupsJoined':{group.id: group.to_dict() for group in self.groups_joined},
             'groupsOwned':{group.id: group.to_dict() for group in self.groups_owned},
-            'addedFriends': [friend.username for friend in self.added_friends],
-            'addedBy': [friend.username for friend in self.added_by]
+            'addedFriends': [friend.username for friend in self.added_friends if hasattr(friend, 'username')],
+            'addedBy': [friend.username for friend in self.added_by if hasattr(friend, 'username')]
         }
     def to_resource_dict(self):
         return{
