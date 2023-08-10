@@ -4,9 +4,21 @@
 
 body {
     background-color: #222;
-    /* color: #fff; */
+    max-height: 100vh;
+    overflow-y: hidden;
   }
-
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  @media screen and (max-width: 1343px) {
+    body {
+      overflow-y: auto;
+    }
+  }
   button {
     background-color: #fff;
     color: #000;

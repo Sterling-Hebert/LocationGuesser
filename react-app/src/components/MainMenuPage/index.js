@@ -5,6 +5,7 @@ import { logout } from '../../store/session';
 import './MainMenuPage.css';
 import logo from './locationIcon.png';
 
+
 function MainMenuPage() {
   const dispatch = useDispatch();
   const history = useHistory();

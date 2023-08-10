@@ -1,139 +1,232 @@
 .social-page {
-    position: relative;
-    padding: 20px;
-    color: white;
-    padding-bottom: 20px;
-  }
+  position: relative;
+  padding: 20px;
+  color: white;
+  padding-bottom: 20px;
+}
 
-  .social-page  h1{
-    position: relative;
-    padding: 20px;
-    margin-bottom: 10px;
-  }
+.social-page h1 {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 10px;
+}
 
-  .back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #000;
-  }
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
 
-  .back-button:hover {
-    background-color: #e6e6e6;
-  }
+.back-button:hover {
+  background-color: red;
+}
 
-  .create-group-section {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
+.create-group-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+}
 
-  }
-  .create-group-section button {
-    display: inline-block;
-    background-color: #fff;
-    margin-right: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    color: #000;
-  }
+.create-group-section button {
+  display: block;
+  background-color: #fff;
+  margin: 10px auto;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+}
 
-  .group-section {
-    margin-bottom: 20px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+.move-right {
+  margin-left: 20px;
+}
 
-  .single-group-section{
-    border: 1px solid #ccc;
-    padding-left: 10px;
-  }
+.group-section {
+  margin-bottom: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 300px;
+  color: white;
+  overflow: auto;
+  flex: 2
+}
 
-  .group-section h2 {
-    margin-bottom: 10px;
-  }
+.single-group-section {
+  border: 1px solid #ccc;
+  padding-left: 10px;
+}
 
-  .group-section button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000;
-  }
+.group-section h2 {
+  margin-bottom: 20px;
+  margin-left: 185px;
+  padding-bottom: 10px;
+}
 
-  .group-section button:hover {
-    background-color: #e6e6e6;
-  }
+.group-section p {
+  margin-bottom: 20px;
+  margin-left: 200px;
+  padding-bottom: 10px;
+}
 
-  .group-section div {
-    margin-bottom: 20px;
-  }
 
-  .group-section img {
-    width: 200px;
-    height: 100px;
-  }
+.group-section button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
 
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
 
-  .modal-content {
-    background-color: gray;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+.group-section button:hover {
+  background-color: red;
+}
 
-  .modal-content h3 {
-    margin-bottom: 10px;
-  }
+.group-section div {
+  margin-bottom: 20px;
+}
 
-  .modal-content button {
-    margin: 5px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-  }
+.group-section img {
+  width: 200px;
+  height: 100px;
+}
 
-  .modal-content button:hover {
-    background-color: gray;
-  }
-  .green{
-    background-color: green;
-  }
-  .red{
-    background-color: red;
-  }
-  .group-section-container {
-    overflow-y: auto;
-    max-height: 300px;
-  }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: gray;
+}
+
+.social-page-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.request-wrapper {
+  flex: 1;
+  margin: 10px;
+  /* padding: 10px; */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: auto;
+}
+
+.request-container {
+  padding: 5px;
+  color: white;
+  overflow: auto;
+  margin-left: 75px;
+}
+
+.request-h2 {
+  font-size: 20px;
+  /* margin-bottom: 10px; */
+}
+
+.request-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.request-li {
+  margin-bottom: 10px;
+}
+
+.request-li button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.request-p{
+  padding-top: 20px;
+}
+
+.friends-list-container {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  overflow: auto;
+
+}
+
+.friends-list-h2 {
+  font-size: 20px;
+  margin-left: 90px;
+  margin-bottom: 30px;
+}
+
+.friends-list-ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  margin-left: 75px;
+}
+
+.friends-list-li {
+  margin-bottom: 10px;
+}
+.friends-list-p{
+  padding-left: 84px
+}
+
+.delete-friend-button{
+  color: red;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
   .social-page-container {
-    overflow-y: auto;
-    max-height: 1000px;
+    flex-direction: column;
   }
+}

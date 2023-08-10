@@ -11,10 +11,17 @@ function SignupFormModal() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  // const [countryBanner, setCountryBanner] = useState("");
+  // const [countryBannerPreview, setCountryBannerPreview] = useState("");
   const [errors, setErrors] = useState([]);
   const { closeModal } = useModal();
 
   const history = useHistory();
+
+  // const validateUrl = (url) => {
+  //   const pattern = /^(ftp|http|https):\/\/[^ "]+$/;
+  //   return pattern.test(url);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,6 +40,9 @@ function SignupFormModal() {
     } else if (!email.includes("@")) {
       validationErrors.push("Invalid email");
     }
+    // if (countryBanner && !validateUrl(countryBanner)) {
+    //   validationErrors.push("Invalid Country Banner URL");
+    // }
 
     if (password === confirmPassword) {
       if (validationErrors.length === 0) {
@@ -50,6 +60,18 @@ function SignupFormModal() {
       setErrors(["Confirm Password field must be the same as the Password field"]);
     }
   };
+
+  // const handleCountryBannerChange = (e) => {
+  //   const url = e.target.value;
+  //   setCountryBanner(url);
+  //   setCountryBannerPreview(url);
+  //   setErrors([]);
+
+  //   const isValidUrl = validateUrl(url);
+  //   if (!isValidUrl) {
+  //     setErrors(["Invalid URL."]);
+  //   }
+  // };
 
   return (
     <>
@@ -91,6 +113,20 @@ function SignupFormModal() {
             required
           />
         </label>
+        {/* <label>
+          Country Banner
+          <input
+            type="text"
+            value={countryBanner}
+            onChange={handleCountryBannerChange}
+            required
+          />
+        </label>
+        {countryBannerPreview && validateUrl(countryBannerPreview) && (
+          <div className="banner-preview">
+            <img src={countryBannerPreview} alt="Country Banner Preview" />
+          </div>
+        )} */}
         <button type="submit">Sign Up</button>
       </form>
     </>

@@ -4,6 +4,8 @@ from app.models import db
 from app.models.friend import Friend, FriendRequest
 from app.models.user import User
 from datetime import datetime
+from sqlalchemy import and_
+from sqlalchemy.exc import IntegrityError
 
 requests_routes = Blueprint('requests', __name__)
 
@@ -54,32 +56,36 @@ def accept_friend_request(request_id):
     """
     Accept a friend request
     """
-
     friend_request = FriendRequest.query.get(request_id)
 
     if friend_request is None or friend_request.recipient_id != current_user.id:
-        return jsonify({'error': 'no such friend request or already friends'})
+        return jsonify({'error': 'no such friend request or already friends'}), 400
 
+    existing_friendship = Friend.query.filter(
+        and_(Friend.user_id == friend_request.sender_id, Friend.friend_id == friend_request.recipient_id)
+    ).first()
 
-    friend1 = Friend(
+    if existing_friendship:
+        db.session.delete(friend_request)
+        db.session.commit()
+        return jsonify({'message': 'Friendship already exists'})
+
+    new_friendship = Friend(
         user_id=friend_request.sender_id,
         friend_id=friend_request.recipient_id
     )
-    friend2 = Friend(
-        user_id=friend_request.recipient_id,
-        friend_id=friend_request.sender_id
-    )
-
-    db.session.add(friend1)
-    db.session.add(friend2)
+    db.session.add(new_friendship)
 
     friend_request.status = 'Accepted'
 
-    db.session.delete(friend_request)
-    db.session.commit()
-
-
-    return {{'Friend added'}}
+    try:
+        db.session.commit()
+        db.session.delete(friend_request)
+        db.session.commit()
+        return jsonify({'message': 'Friend request accepted'}), 200
+    except IntegrityError as e:
+        db.session.rollback()
+        return jsonify({'error': 'Error accepting friend request'}), 500
 
 @requests_routes.route('/<int:request_id>/decline', methods=['POST'])
 @login_required
@@ -93,6 +99,8 @@ def decline_friend_request(request_id):
         return jsonify({'error': 'no request or already declined'})
 
     friend_request.status = 'Declined'
+
+    db.session.delete(friend_request)
 
     db.session.commit()
 
