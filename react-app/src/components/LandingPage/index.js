@@ -24,6 +24,8 @@ function LandingPage() {
     openModal(<SignupFormModal />);
   };
 
+
+
   const handleDemo = async (e) => {
     e.preventDefault();
     let demoEmail = 'demoUS@aa.io';
@@ -49,11 +51,14 @@ function LandingPage() {
   };
 
   return (
-    <div className="LP-div" >
+    <div className="LP-div">
       <div className="LP-logo">
         <img src={logo} alt="Location Icon" />
       </div>
-      <h1 className="LP-h1">Welcome to Location Guesser</h1>
+      <h1 className="LP-h1">Location Guesser</h1>
+      <button className="LP-button" onClick={handleDemo}>
+          Guest Login
+        </button>
       <div className="LP-buttons">
         <button className="LP-button" onClick={handleLoginButtonClick}>
           Login
@@ -61,10 +66,15 @@ function LandingPage() {
         <button className="LP-button" onClick={handleSignupButtonClick}>
           Signup
         </button>
-        <button className="LP-button" onClick={handleDemo}>
-          Guest Login
+        <button className="LP-button" onClick={() => window.location.href = 'https://github.com/Sterling-Hebert/LocationGuesser'}>
+          <i className="fab fa-github"></i> GitHub Link
         </button>
+        <button className="LP-button" onClick={() => window.location.href = 'https://www.linkedin.com/in/sterling-hebert-615137238/'}>
+          <i className="fab fa-linkedin"></i> LinkedIn
+        </button>
+      <h2 className="LP-h2">Developed By Sterling Hebert</h2>
       </div>
+
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (

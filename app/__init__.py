@@ -12,6 +12,7 @@ from .config import Config
 from .api.game_routes import game_routes
 from .api.stats_routes import stats_routes
 from .api.group_routes import groups_routes
+from .api.request_routes import requests_routes
 
 app = Flask(__name__, static_folder='../react-app/build', static_url_path='/')
 
@@ -34,6 +35,8 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(game_routes, url_prefix='/api/play')
 app.register_blueprint(stats_routes, url_prefix='/api/stats')
 app.register_blueprint(groups_routes, url_prefix='/api/groups')
+app.register_blueprint(requests_routes, url_prefix='/api/requests')
+
 
 
 

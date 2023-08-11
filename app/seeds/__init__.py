@@ -5,6 +5,9 @@ from app.seeds.games import seed_games, undo_games
 from app.seeds.scores import seed_scores, undo_scores
 from app.seeds.rounds import seed_rounds, undo_rounds
 from app.seeds.user_groups import seed_user_groups, undo_user_groups
+from app.seeds.friends import seed_friends, undo_friends
+from app.seeds.friend_request import seed_friend_request, undo_friend_request
+
 
 
 from app.models.db import db, environment, SCHEMA
@@ -28,6 +31,8 @@ def seed():
         undo_scores()
         undo_rounds()
         undo_user_groups()
+        undo_friends()
+        undo_friend_request()
 
     seed_users()
     seed_groups()
@@ -35,6 +40,8 @@ def seed():
     seed_scores()
     seed_rounds()
     seed_user_groups()
+    seed_friends()
+    seed_friend_request()
     # Add other seed functions here
 
 
@@ -47,6 +54,8 @@ def undo():
     undo_scores()
     undo_rounds()
     undo_user_groups()
+    undo_friends()
+    undo_friend_request()
 
     # Add other undo functions here
     # print("")

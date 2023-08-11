@@ -14,6 +14,7 @@ import LandingPage from "./components/LandingPage";
 import FindGroupsPage from "./components/FindGroupsPage";
 import UnitedStatesMap from "./components/MapTools/UnitedStatesMap";
 import FamousPlacesGame from "./components/MapTools/FamousPlacesMap";
+import FindingFriendsPage from "./components/FindFriendsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path="/play/united-states">
           <UnitedStatesMap/>
+        </Route>
+        <Route path="/social/find-friends">
+          <FindingFriendsPage/>
         </Route>
         <Route path="/social">
           <SocialPage/>

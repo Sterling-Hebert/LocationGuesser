@@ -2,6 +2,26 @@
 
 body {
   overflow: hidden;
+  background: linear-gradient(-45deg, #A9F99E, #46ADD5, red);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .LP-div {
@@ -11,7 +31,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   position: relative;
-  background-image: url('https://i0.wp.com/onesea.org/wp-content/uploads/2020/04/beach-2560x1440-sea-shore-blue-waves-hd-4k-14198-e1589823739306.jpg?ssl=1');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,6 +39,11 @@ body {
 .LP-h1 {
   color: #fff;
   font-size: 50px;
+  padding: 10px 0;
+}
+.LP-h2 {
+  color: #fff;
+  font-size: 35px;
   padding: 10px 0;
 }
 
