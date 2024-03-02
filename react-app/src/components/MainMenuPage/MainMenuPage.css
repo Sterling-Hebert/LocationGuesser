@@ -20,8 +20,34 @@
 
 .MMP-h1 {
   color: white;
+  font-style:oblique;
   font-size: 30px;
   margin-top: 60px;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #a7abaf82;
+  background-image: url(https://wallpaperaccess.com/full/1308193.jpg);
+  -webkit-background-clip: text;
+  -webkit-animation: water 20s infinite;
+          animation: water 15s infinite;
+}
+@-webkit-keyframes water {
+  from {
+    background-position: left 0 top 0;
+  }
+  to {
+    background-position: left 2000px top 0;
+  }
+}
+
+@keyframes water {
+  from {
+    background-position: left 0 top 0;
+  }
+  to {
+    background-position: left 1000px top 0;
+  }
 }
 
 .MMP-card-container {
