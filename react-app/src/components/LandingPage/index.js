@@ -66,13 +66,22 @@ function LandingPage() {
         <button className="LP-button" onClick={handleSignupButtonClick}>
           Signup
         </button>
-        <button className="LP-button" onClick={() => window.location.href = 'https://github.com/Sterling-Hebert/LocationGuesser'}>
-          <i className="fab fa-github"></i> GitHub Link
-        </button>
+        <br></br>
+        <br></br>
+        <br></br>
+
+
+        <h2 className="LP-h2">Developed By Sterling Hebert</h2>
         <button className="LP-button" onClick={() => window.location.href = 'https://www.linkedin.com/in/sterling-hebert-615137238/'}>
           <i className="fab fa-linkedin"></i> LinkedIn
         </button>
-      <h2 className="LP-h2">Developed By Sterling Hebert</h2>
+        <button className="LP-button" onClick={() => window.location.href = 'https://sterlinghebertiii.netlify.app/'}>
+        <i class="fa-solid fa-briefcase"></i> Portfolio
+        </button>
+        <button className="LP-button" onClick={() => window.location.href = 'https://github.com/Sterling-Hebert/LocationGuesser'}>
+          <i className="fab fa-github"></i> GitHub Link
+        </button>
+
       </div>
 
       <form onSubmit={handleSubmit}>
