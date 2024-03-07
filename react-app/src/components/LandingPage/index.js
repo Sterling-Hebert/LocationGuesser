@@ -56,11 +56,7 @@ function LandingPage() {
         <img src={logo} alt="Location Icon" />
       </div>
       <h1 className="LP-h1">Location Guesser</h1>
-
       <div className="LP-buttons">
-      <br></br>
-        <br></br>
-        <br></br>
         <button className="LP-button" onClick={handleLoginButtonClick}>
           Login
         </button>
@@ -82,8 +78,6 @@ function LandingPage() {
       </div>
 
       <div className="LP-buttons2">
-      <br></br>
-        <br></br>
 
         <button className="LP-button" onClick={() => window.location.href = 'https://www.linkedin.com/in/sterling-hebert-615137238/'}>
           <i className="fab fa-linkedin"></i> LinkedIn
@@ -94,8 +88,7 @@ function LandingPage() {
         <button className="LP-button" onClick={() => window.location.href = 'https://github.com/Sterling-Hebert/LocationGuesser'}>
           <i className="fab fa-github"></i> GitHub Link
         </button>
-        <br></br>
-        <br></br>
+
 
       </div>
 
