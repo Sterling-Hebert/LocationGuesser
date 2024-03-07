@@ -46,7 +46,7 @@ body {
   color: white;
   font-style:oblique;
   font-size: 30px;
-  margin-top: -260px;
+  margin-top: -110px;
   font-size: 90px;
   text-transform: uppercase;
   font-weight: 900;
@@ -58,10 +58,10 @@ body {
 }
 @-webkit-keyframes water {
   from {
-    background-position: right 0 top 0;
+    background-position: left 0 top 0;
   }
   to {
-    background-position: right 2000px top 0;
+    background-position: left 2000px top 0;
   }
 }
 
@@ -74,9 +74,9 @@ body {
   }
 }
 .LP-h2 {
-  color: #fff;
+  color: rebeccapurple;
   font-size: 35px;
-  padding: 10px 0;
+  left:40px
 }
 
 .LP-buttons {
