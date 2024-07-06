@@ -1,4 +1,4 @@
-# Location Guesser (Inspired by GeoGuessr)
+# Location Guesser
 
 An online geography game that challenges players to guess their random location in the world using Google Street View images.
 
