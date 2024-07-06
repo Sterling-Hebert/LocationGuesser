@@ -66,7 +66,9 @@ https://locationguesser.onrender.com/
   SECRET_KEY= secret_key
   DATABASE_URL=sqlite:///dev.db
   SCHEMA=locationguesser_schema
-  REACT_APP_GOOGLE_MAPS_API_KEY = google_api_key_here   # Works without one
+  REACT_APP_GOOGLE_MAPS_API_KEY = google_api_key_here   
+  ^^^^
+  # Works without one
   # If you have your own key, consider that you will have to re-invert colors back to normal in the   /react-app/src/components/MapTools/defaultMap.css file.
   ```
 
