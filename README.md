@@ -44,7 +44,7 @@ https://locationguesser.onrender.com/
 
 ## Run it locally
 
-1. Clone the repository
+1. Clone the repository (branch main)
 
    ```
    https://github.com/Sterling-Hebert/LocationGuesser.git
