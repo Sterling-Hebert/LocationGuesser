@@ -42,7 +42,7 @@ https://locationguesser.onrender.com/
 ![image](https://github.com/Sterling-Hebert/LocationGuesser/assets/60053292/4d79be44-1096-4154-a30d-ce9942c6ccd8)
 
 
-## Run it locally
+## Running it locally
 
 1. Clone the repository (branch main)
 
