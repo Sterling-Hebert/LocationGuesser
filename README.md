@@ -2,7 +2,7 @@
 
 An online geography game that challenges players to guess their random location in the world using Google Street View images.
 
-This project aims to achieved the folowing:
+This project achieved the folowing:
 
 User authorization, multiple game modes, user stat tracking, friend requests, user groups, and leaderboard rankings.
 
